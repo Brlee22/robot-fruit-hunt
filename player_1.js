@@ -1,12 +1,11 @@
-// number of fruits
+
 var num;
-// array holding number of types of fruits
+
 var totalfruits = [],
     myfruits = [],
     hisfruits = [],
-    remainfruits = [], // fruits of a given type remaining
-    deadfruits = []; // meaning we dont care about this fruit
-                     // we have either won or lost in this category
+    remainfruits = [], 
+    deadfruits = []; 
 
 // board specifying weights
 var heatmap;
@@ -68,15 +67,9 @@ function make_move() {
 }
 
 // Parameters
-var c1 = 1.6, // determines how much the 'importance' of a fruit relates
-            // with the total # of that type of fruit. As c1 increases, the
-            // less common fruits become relatively more valuable. c1 > 0
-    c2 = 1.5, // determines the importance of 'clincher' fruits. If a fruit
-            // category is a close race, then that fruit becomes more important.
-            //  As c2 increases, this effect increases. c2 > 0
-    c3 = 1.2, // determines how much the importance of a fruit dissapates as a
-             // function of distance from our robot.
-             //  As c3 increases, the importance dissapates more rapidly
+var c1 = 1.6, 
+    c2 = 1.5, 
+    c3 = 1.2, 
     c4 = 3;  // determines how important picking up a fruit at this spot is
 
 function add_heat(field) {
